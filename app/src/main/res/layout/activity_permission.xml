@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PermissionActivity">
+
+  <androidx.viewpager.widget.ViewPager
+      android:id="@+id/view_pager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  <LinearLayout
+      android:id="@+id/layoutDots"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dots_height"
+      android:gravity="center"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+  <View
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:visibility="gone"
+      android:layout_height="1dp"
+      android:alpha=".5"
+      android:background="@android:color/white"
+      app:layout_constraintBottom_toTopOf="@+id/layoutDots" />
+
+  <ImageView
+      android:id="@+id/btn_next"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_marginBottom="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="32dp"
+      android:adjustViewBounds="true"
+      app:srcCompat="@drawable/nextbutton_1"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@id/layoutDots"
+      app:layout_constraintTop_toTopOf="@+id/layoutDots" />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btn_skip"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@null"
+      android:fontFamily="@font/kgmean"
+      android:text="@string/skip"
+      android:textColor="@android:color/white"
+      android:textSize="24sp"
+      android:layout_marginStart="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/layoutDots" />
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/permission_cardView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginEnd="24dp"
+      android:elevation="8dp"
+      android:visibility="gone"
+      app:cardCornerRadius="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#073042">
+
+      <ImageView
+          android:id="@+id/permissionIconImageView"
+          android:layout_width="75dp"
+          android:layout_height="75dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp"
+          android:tint="#FFF"
+          app:layout_constraintBottom_toTopOf="@+id/requestPermissionButton"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/permissionHeadingTextView"
+          app:srcCompat="@drawable/round_directions_run_24" />
+
+      <TextView
+          android:id="@+id/permissionHeadingTextView"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:layout_marginStart="24dp"
+          android:layout_marginLeft="24dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="24dp"
+          android:layout_marginRight="24dp"
+          android:fontFamily="@font/gilroy_regular"
+          android:gravity="center_horizontal"
+          android:text="Need your permission"
+          android:textAlignment="center"
+          android:textColor="#3ddc84"
+          android:textSize="28sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/permissionRequestDescription"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginBottom="16dp"
+          android:fontFamily="@font/gilroy_regular"
+          android:gravity="center_horizontal"
+          android:text="Need your permission for so and so reason regarding"
+          android:textAlignment="center"
+          android:textColor="#4482ee"
+          android:textSize="20sp"
+          app:layout_constraintBottom_toTopOf="@+id/requestPermissionButton"
+          app:layout_constraintEnd_toEndOf="@id/permissionHeadingTextView"
+          app:layout_constraintStart_toEndOf="@+id/permissionIconImageView"
+          app:layout_constraintTop_toBottomOf="@id/permissionHeadingTextView" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/requestPermissionButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:backgroundTint="#FFF"
+          android:fontFamily="@font/gilroy_xbold"
+          android:text="Request Permission"
+          android:textColor="#f86734"
+          android:textSize="16dp"
+          app:cornerRadius="75dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

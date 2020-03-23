@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">EcoFun</string>
+    <string name="jungleImageViewTransition">jungleImageViewTransitionString</string>
+    <string name="animalsCarImageViewTransition">animalsCarImageViewTransitionString</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="copyrights_credit">Made by Manas Malla ©</string>
+    <string name="jungleBackgroundDescription">Jungle Background</string>
+    <string name="cityBackgroundDescription"> City Background </string>
+    <string name="animalsCarDescription">Car with Animals moving</string>
+    <string name="woodenBoardDescription">A Wooden Board With Text</string>
+    <string name="or_signup">Or, Signup!</string>
+    <string name="orSocial">or Login With Social Media...</string>
+    <string name="signUp">SignUp</string>
+    <string name="orLogin">Or, Login!</string>
+    <string name="description_pollution"> In the overwhelming and non-ecofriendly world, high emission of greenhouse gases are leading to global warming, melting of ice glaciers, and several disastrous events.  </string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="title_ws2">Increasing Pollution</string>
+    <string name="title_ws1"> Global Crisis </string>
+    <string name="description_globalwarming"> Climate change, has become a major concern for the sustenance of life on the Planet Earth.​\n Greenhouse gases can trap heat in the atmosphere and are impacting climate change.</string>
+    <string name="description_carbonfootprint"> Carbon footprint, the amount of greenhouse gases emitted by us each year, helps us in evaluating the our impact on the world. ​ </string>
+    <string name="title_ws3"> Let’s Make our Carbon Footprint Greener </string>
+    <string name="title_ws4"> earn green points </string>
+    <string name="description_gp"> Earn points for the good deeds you do like going by walk, cycling, using public transport! </string>
+    <string name="description_plantTrees"> Selfie Time! \n Share a pic of you planting a tree and earn 30 GreenPoints for every tree planted!! </string>
+    <string name="title_ws5"> More Trees = \n More Green points \n = More happiness!!</string>
+    <string name="title_ws6"> Drive Less! </string>
+    <string name="description_CO2Points"> The more you drive… the more CO<sub> 2 </sub> you emit… The more number of monster that come up!!</string>
+    <string name="title_ws7">Save Us &amp; the Water Body</string>
+    <string name="description_ocean"> Oceans are the prerequisite and home of hundreds of kinds of aquatic life! Presently, the aquatic ecosystem is being disturbed and organisms are being endangered!​ </string>
+    <string name="title_ws8">Avengers.....Assemble!!</string>
+    <string name="description_assemble">Let\'s all assmble to stop pollution and use this as a solution to stop pollution or else... it\'s the next ENDGAME!!!</string>
+    <string name="description_permissions">Please GRANT permissions so we can start to earn points!!!</string>
+    <string name="title_ws9">permission please!</string>
+
+    <string name="activity_recognition_description"> Need your permission to recognise your activity, like walking, running, going by vehicle, etc.  so that we can start calculating distance so you can earn points! </string>
+    <string name="location_description">Need your permission to access your location for calculating distance for your points</string>
+    <string name="location_background_description">Need your permission to access your background location in order to calculate your distance even in the background!</string>
+    <string name="storage_description">Need your permission to read your storage so that you can upload photos as profile pic and upload you doing good deeds to earn points!</string>
+    <string name="ACTIVITY_RECOGNITION">Activity Recognition</string>
+    <string name="FINE_LOCATION">Access Fine Location</string>
+    <string name="BACKGROUND_LOCATION">Access Background Location</string>
+    <string name="EXTERNAL_STORAGE">Access Your Storage</string>
+    <string name="title_ws10">Running for some Variables!</string>
+    <string name="description_variables">Wait for a moment while quickly fetch your data!</string>
+</resources>

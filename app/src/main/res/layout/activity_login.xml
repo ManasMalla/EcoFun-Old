@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/jungleBackground_loginActivity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.45"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/jungle_background"
+        android:transitionName="@string/jungleImageViewTransition"
+        android:contentDescription="@string/jungleBackgroundDescription"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/animalsCar_loginActivity"
+        app:srcCompat="@drawable/animals_safari_car"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/jungleBackground_loginActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="75dp"
+        android:transitionName="@string/animalsCarImageViewTransition"
+        android:contentDescription="@string/animalsCarDescription"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/loginSignUpCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/socialLogin_loginActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/loginTitle_loginActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/junglegym"
+                android:text="@string/login"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_inputLayout_loginActivity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:hint="@string/username"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginTitle_loginActivity">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username_editText_loginActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kgfont"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_textlayout_loginActivity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="36dp"
+                android:hint="@string/password"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/username_inputLayout_loginActivity">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_editText_loginActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kgfont"
+                    android:inputType="textPassword"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton_loginActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/kg_what_the_teacher_wants"
+                android:text="@string/login"
+                android:onClick="loginOnClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/password_textlayout_loginActivity"
+                app:layout_constraintTop_toBottomOf="@id/password_textlayout_loginActivity" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/orLoginButton_loginActivity"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/kg_what_the_teacher_wants"
+                android:text="@string/or_signup"
+                android:onClick="orSignUpOnClick"
+                app:layout_constraintBottom_toBottomOf="@id/loginButton_loginActivity"
+                app:layout_constraintEnd_toStartOf="@id/loginButton_loginActivity"
+                app:layout_constraintTop_toTopOf="@id/loginButton_loginActivity" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/creditsTextView_loginActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/kgfont"
+        android:gravity="center_horizontal"
+        android:text="@string/copyrights_credit"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/socialLogin_loginActivity"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#3ddc84"
+        app:layout_constraintBottom_toTopOf="@+id/creditsTextView_loginActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/orLoginSocial_loginActivity"
+            app:autoSizeTextType="uniform"
+            android:text="@string/orSocial"
+            android:gravity="center"
+            android:onClick="orLoginSocialOnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="24sp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/gilroy_xbold"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
